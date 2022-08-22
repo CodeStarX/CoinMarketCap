@@ -1,0 +1,9 @@
+<resources>
+    <string name="empty"></string>
+    <string name="app_name">CoinMarketCap</string>
+
+    <string name="currency_list_price">%1s Usd</string>
+    <string name="currency_list_price_unknown">Unknown</string>
+    <string name="label_sort_action">Sort</string>
+    <string name="label_filter_action">Filter</string>
+</resources>

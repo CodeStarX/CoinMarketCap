@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/_16sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:id="@+id/currency_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_btc"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/currency_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_image"
+        app:layout_constraintStart_toEndOf="@+id/currency_image"
+        app:layout_constraintTop_toTopOf="@+id/currency_image"
+        tools:text="BTC"
+        />
+
+    <TextView
+        android:id="@+id/currency_name"
+        style="@style/AppCurrencyItemTextSecondary"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_symbol"
+        app:layout_constraintStart_toEndOf="@+id/currency_symbol"
+        tools:text="Bitcoin" />
+
+    <TextView
+        android:id="@+id/currency_slug"
+        style="@style/AppCurrencyItemTextSecondary"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toStartOf="@+id/currency_symbol"
+        app:layout_constraintTop_toBottomOf="@+id/currency_symbol"
+        tools:text="bitcoin" />
+
+    <TextView
+        android:id="@+id/currency_price"
+        style="@style/AppCurrencyItemTextPrimary"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$8,891.17" />
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/emptySpace"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_56sdp"
+        app:layout_constraintTop_toBottomOf="@+id/currency_slug"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="OK"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintTop_toBottomOf="@+id/emptySpace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

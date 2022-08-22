@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@+id/navigation_main_fragment">
+
+   <fragment android:name="mohsen.soltanian.coinmarketcap.ui.fragments.main.MainFragment"
+       android:id="@+id/navigation_main_fragment"
+       tools:layout="@layout/fragment_main"
+       android:label="mainFragment"/>
+
+
+</navigation>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="mohsen.soltanian.coinmarketcap.ui.fragments.main.MainViewModel" />
+
+        <variable
+            name="adapter"
+            type="mohsen.soltanian.coinmarketcap.ui.fragments.main.adapter.CryptosAdapter" />
+
+        <variable
+           name="rvLayoutManager"
+           type="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.main.MainFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="ltr"
+            android:background="#282828">
+
+            <RelativeLayout
+                android:id="@+id/lRvParent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCrypto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adapter="@{adapter}"
+                    app:layoutManager="@{rvLayoutManager}"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/row_crypto" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sortAction"
+        android:orderInCategory="1"
+        android:title="@string/label_sort_action"
+        android:titleCondensed="Sort By">
+
+        <menu>
+            <item
+                android:id="@+id/itemSortByName"
+                android:title="Sort By Name" />
+            <item
+                android:id="@+id/itemSortByPrice"
+                android:title="Sort By Price" />
+            <item
+                android:id="@+id/itemSortByMarketCap"
+                android:title="Sort By Market Cap" />
+            <item
+                android:id="@+id/itemSortByCirculatingSupply"
+                android:title="Sort By Circulating Supply" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/filterAction"
+        android:orderInCategory="2"
+        android:title="@string/label_filter_action"
+        android:titleCondensed="Filter By">
+
+        <menu>
+            <item
+                android:id="@+id/itemFilterPercent"
+                android:title="Percent" />
+            <item
+                android:id="@+id/itemFilterVolume"
+                android:title="Volume" />
+        </menu>
+
+    </item>
+
+</menu>
